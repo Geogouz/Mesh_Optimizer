@@ -1,6 +1,6 @@
 Mesh Optimizer
 =======================
-<img width="730" src="https://github.com/Geogouz/Mesh_Optimizer/blob/master/Content/logo.png"/>
+<img width="200" src="https://github.com/Geogouz/Mesh_Optimizer/blob/master/Content/logo.png"/>
 </br>
 </br>
 </br>
