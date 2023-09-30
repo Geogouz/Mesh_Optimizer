@@ -1,10 +1,6 @@
 Mesh Optimizer
 =======================
 <img width="200" src="https://github.com/Geogouz/Mesh_Optimizer/blob/master/Content/logo.png"/>
-</br>
-</br>
-</br>
-
 <img src="https://github.com/Geogouz/Mesh_Optimizer/blob/master/Content/Cover.jpg"/>
 
 "Mesh Optimizer" is an application that can assist with the problem of placing optimally a given set of Radio-Nodes (RNs) in an indoor 2D environment. The term optimal could be subject to different interpretations and definitions and, depending on the goals, there can also be different optimization approaches. Yet, in each case, what we are ultimately interested in adjusting, is the signal Radiomap (according to the respected definition).
