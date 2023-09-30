@@ -1,6 +1,6 @@
 Mesh Optimizer
 =======================
-<img src="https://github.com/Geogouz/Mesh_Optimizer/blob/master/Content/logo.png"/>
+<img width="730" src="https://github.com/Geogouz/Mesh_Optimizer/blob/master/Content/logo.png"/>
 </br>
 </br>
 </br>
@@ -11,6 +11,8 @@ Mesh Optimizer
 
 In our case, the implemented method aims to find the Node-Setup that offers the maximum overall indoor coverage, after simulating various radio-map scenarios based on an enhanced free-space path loss signal model..
 
+</br>
+</br>
 
 Screenshots:
 <img src="https://github.com/Geogouz/Mesh_Optimizer/blob/master/Content/Obstructions modeled.jpg"/>
