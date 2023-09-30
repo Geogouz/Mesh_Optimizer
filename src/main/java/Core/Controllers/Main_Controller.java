@@ -1027,7 +1027,7 @@ public class Main_Controller implements Initializable {
 
     private void open_guide(){
         try {
-            Desktop.getDesktop().browse(new URL("https://GIT-/Guide.pdf").toURI());
+            Desktop.getDesktop().browse(new URL("https://github.com/Geogouz/Mesh_Optimizer/blob/master/Content/Guide.pdf").toURI());
         } catch (IOException | URISyntaxException e) {
             e.printStackTrace();
         }
