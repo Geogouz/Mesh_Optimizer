@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="Nodes_Optimizer_panel_fx" prefHeight="685.0" prefWidth="1140.0" style="-fx-background-color: #232323;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <ScrollPane fx:id="scrollable_nodes_optimizer_fx" hbarPolicy="NEVER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pannable="true" prefHeight="644.0" prefWidth="940.0" style="-fx-background: #ffffff; -fx-background-color: transparent;" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
+            <cursor>
+                <Cursor fx:constant="OPEN_HAND" />
+            </cursor>
+            <content>
+                <Pane fx:id="Edit_Nodes_Optimizer_Pane_fx" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
+                    <children>
+                        <Group fx:id="nodes_optimizer_group_fx">
+                            <cursor>
+                                <Cursor fx:constant="OPEN_HAND" />
+                            </cursor>
+                        </Group>
+                    </children>
+                </Pane>
+            </content>
+        </ScrollPane>
+    </center>
+    <right>
+        <StackPane fx:id="toolbox_panel_fx" prefWidth="200.0" style="-fx-background-color: #e2e2e2;" BorderPane.alignment="CENTER">
+            <children>
+                <VBox fx:id="main_editor_panel_fx" alignment="TOP_CENTER" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" style="-fx-background-color: #e2e2e2;">
+                    <children>
+                        <VBox fx:id="main_editor_toolbox_fx" fillWidth="false" maxHeight="200.0" maxWidth="200.0" minHeight="200.0" minWidth="200.0" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="NEVER">
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="TEXT_ONLY" maxHeight="20.0" maxWidth="200.0" minHeight="20.0" minWidth="200.0" prefHeight="20.0" prefWidth="200.0" text="Toolbox" textAlignment="CENTER">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <VBox fx:id="enabled_editor_layout_fx" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <HBox layoutX="10.0" maxHeight="30.0" maxWidth="200.0" minHeight="30.0" minWidth="200.0" prefHeight="30.0" prefWidth="200.0" spacing="4.0">
+                                            <children>
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="TEXT_ONLY" graphicTextGap="0.0" maxHeight="30.0" maxWidth="112.0" minHeight="30.0" minWidth="112.0" prefHeight="30.0" prefWidth="112.0" text="GRID Cell Size:">
+                                                    <HBox.margin>
+                                                        <Insets left="3.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                                <Label fx:id="cell_size_label_fx" alignment="CENTER" contentDisplay="TEXT_ONLY" maxHeight="30.0" maxWidth="35.0" minHeight="30.0" minWidth="35.0" prefHeight="30.0" prefWidth="35.0" text="-">
+                                                    <HBox.margin>
+                                                        <Insets left="2.0" />
+                                                    </HBox.margin>
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Button fx:id="generate_grid_fx" focusTraversable="false" maxHeight="30.0" maxWidth="35.0" minHeight="30.0" minWidth="35.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="35.0" text="Set" textAlignment="RIGHT">
+                                                    <HBox.margin>
+                                                        <Insets />
+                                                    </HBox.margin>
+                                                </Button>
+                                            </children>
+                                            <VBox.margin>
+                                                <Insets />
+                                            </VBox.margin>
+                                        </HBox>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </VBox>
+                            </children>
+                        </VBox>
+                        <Label alignment="CENTER" contentDisplay="TEXT_ONLY" maxHeight="40.0" maxWidth="200.0" minHeight="40.0" minWidth="200.0" prefHeight="40.0" prefWidth="200.0" text="Optimize:" textAlignment="CENTER">
+                            <font>
+                                <Font name="System Bold" size="14.0" />
+                            </font>
+                        </Label>
+                        <TabPane id="optimization_tab_css" fx:id="optimization_tab_fx" disable="true" maxHeight="300.0" maxWidth="196.0" minHeight="300.0" minWidth="196.0" prefHeight="300.0" prefWidth="196.0" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="NEVER">
+                            <tabs>
+                                <Tab fx:id="best_coverage_tab_fx" closable="false" text="Coverage">
+                                    <content>
+                                        <AnchorPane maxWidth="192.0" minWidth="192.0" prefWidth="192.0">
+                                            <children>
+                                                <VBox style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <VBox fx:id="node_candidates_vbox_fx">
+                                                            <children>
+                                                                <HBox fx:id="coverage_optimization_node_candidates_generation_panel_fx" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" spacing="4.0" visible="false">
+                                                                    <children>
+                                                                        <Label accessibleRole="TEXT_AREA" alignment="CENTER_RIGHT" contentDisplay="TEXT_ONLY" graphicTextGap="0.0" maxHeight="40.0" maxWidth="112.0" minHeight="40.0" minWidth="112.0" prefHeight="40.0" prefWidth="112.0" text="(%) of possible Node&#13;Positions to check:" textAlignment="RIGHT">
+                                                                            <HBox.margin>
+                                                                                <Insets />
+                                                                            </HBox.margin>
+                                                                        </Label>
+                                                                        <TextField fx:id="node_candidates_fx" alignment="CENTER" maxHeight="30.0" maxWidth="35.0" minHeight="30.0" minWidth="35.0" prefHeight="30.0" prefWidth="35.0" promptText="(%)">
+                                                                            <HBox.margin>
+                                                                                <Insets left="2.0" top="5.0" />
+                                                                            </HBox.margin>
+                                                                        </TextField>
+                                                                        <Button fx:id="generate_coverage_optimization_node_candidates_fx" focusTraversable="false" maxHeight="30.0" maxWidth="33.0" minHeight="30.0" minWidth="33.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="33.0" text="Set" textAlignment="RIGHT">
+                                                                            <HBox.margin>
+                                                                                <Insets top="5.0" />
+                                                                            </HBox.margin>
+                                                                        </Button>
+                                                                    </children>
+                                                                    <VBox.margin>
+                                                                        <Insets />
+                                                                    </VBox.margin>
+                                                                </HBox>
+                                                                <StackPane maxHeight="40.0" minHeight="40.0" prefHeight="40.0" VBox.vgrow="NEVER">
+                                                                    <children>
+                                                                        <HBox fx:id="coverage_opt_node_candidates_loading_panel_fx" maxHeight="40.0" maxWidth="192.0" minHeight="40.0" minWidth="192.0" prefHeight="40.0" prefWidth="192.0" visible="false">
+                                                                            <children>
+                                                                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                                                    <image>
+                                                                                        <Image url="@../Graphics/Optimize_Nodes/Spinner-1s-40px.gif" />
+                                                                                    </image>
+                                                                                    <HBox.margin>
+                                                                                        <Insets />
+                                                                                    </HBox.margin>
+                                                                                </ImageView>
+                                                                                <Label contentDisplay="TEXT_ONLY" graphicTextGap="0.0" maxHeight="40.0" maxWidth="80.0" minHeight="40.0" minWidth="80.0" prefHeight="40.0" prefWidth="80.0" text="Candidates&#13;Prepared:" textAlignment="RIGHT">
+                                                                                    <font>
+                                                                                        <Font name="System Bold Italic" size="12.0" />
+                                                                                    </font>
+                                                                                    <HBox.margin>
+                                                                                        <Insets left="5.0" />
+                                                                                    </HBox.margin>
+                                                                                </Label>
+                                                                                <Label fx:id="loaded_candidates_for_coverage_opt_fx" contentDisplay="TEXT_ONLY" graphicTextGap="0.0" layoutX="55.0" layoutY="10.0" maxHeight="40.0" maxWidth="30.0" minHeight="40.0" minWidth="30.0" prefHeight="40.0" prefWidth="30.0">
+                                                                                    <font>
+                                                                                        <Font name="System Bold Italic" size="12.0" />
+                                                                                    </font>
+                                                                                    <HBox.margin>
+                                                                                        <Insets />
+                                                                                    </HBox.margin>
+                                                                                </Label>
+                                                                                <Button fx:id="cancel_candidate_loader_for_coverage_opt_fx" alignment="CENTER" focusTraversable="false" maxHeight="30.0" maxWidth="35.0" minHeight="30.0" minWidth="35.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="35.0" text="Kill" textAlignment="RIGHT">
+                                                                                    <HBox.margin>
+                                                                                        <Insets top="5.0" />
+                                                                                    </HBox.margin>
+                                                                                </Button>
+                                                                            </children>
+                                                                        </HBox>
+                                                                        <HBox fx:id="coverage_optimization_node_candidates_loaded_panel_fx" maxHeight="40.0" maxWidth="192.0" minHeight="40.0" minWidth="192.0" prefHeight="40.0" prefWidth="192.0" spacing="4.0" visible="false">
+                                                                            <children>
+                                                                                <Label fx:id="radiomap_status_for_coverage_optimization_fx" contentDisplay="TEXT_ONLY" graphicTextGap="0.0" maxHeight="40.0" maxWidth="125.0" minHeight="40.0" minWidth="125.0" prefHeight="40.0" prefWidth="125.0" textAlignment="CENTER">
+                                                                                    <font>
+                                                                                        <Font name="System Bold Italic" size="12.0" />
+                                                                                    </font>
+                                                                                    <HBox.margin>
+                                                                                        <Insets left="5.0" />
+                                                                                    </HBox.margin>
+                                                                                </Label>
+                                                                                <ToggleButton fx:id="inspect_radiomap_for_coverage_optimization_fx" focusTraversable="false" maxHeight="30.0" maxWidth="55.0" minHeight="30.0" minWidth="55.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="55.0" text="Inspect" textAlignment="RIGHT">
+                                                                                    <HBox.margin>
+                                                                                        <Insets right="4.0" top="5.0" />
+                                                                                    </HBox.margin>
+                                                                                </ToggleButton>
+                                                                            </children>
+                                                                        </HBox>
+                                                                    </children>
+                                                                </StackPane>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets top="10.0" />
+                                                            </VBox.margin>
+                                                        </VBox>
+                                                        <HBox fx:id="coverage_optimization_setup_size_setter_panel_fx" disable="true" spacing="4.0" visible="false">
+                                                            <children>
+                                                                <Label accessibleRole="TEXT_AREA" contentDisplay="TEXT_ONLY" graphicTextGap="0.0" maxHeight="40.0" maxWidth="95.0" minHeight="40.0" minWidth="95.0" prefHeight="40.0" prefWidth="95.0" text="Find best setup&#13;for n Nodes:">
+                                                                    <HBox.margin>
+                                                                        <Insets left="5.0" />
+                                                                    </HBox.margin>
+                                                                </Label>
+                                                                <TextField fx:id="setup_size_for_coverage_optimization_fx" alignment="CENTER" maxHeight="30.0" maxWidth="35.0" minHeight="30.0" minWidth="35.0" prefHeight="30.0" prefWidth="35.0" promptText="(n)">
+                                                                    <HBox.margin>
+                                                                        <Insets top="5.0" />
+                                                                    </HBox.margin>
+                                                                </TextField>
+                                                                <Button fx:id="maximize_coverage_fx" maxHeight="30.0" maxWidth="45.0" minHeight="30.0" minWidth="45.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="45.0" text="Go" textAlignment="RIGHT">
+                                                                    <HBox.margin>
+                                                                        <Insets right="4.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                </Button>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets top="30.0" />
+                                                            </VBox.margin>
+                                                        </HBox>
+                                                        <HBox fx:id="coverage_optimization_status_fx" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" visible="false">
+                                                            <children>
+                                                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../Graphics/Optimize_Nodes/Spinner-1s-40px.gif" />
+                                                                    </image>
+                                                                    <HBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                    </HBox.margin>
+                                                                </ImageView>
+                                                                <Label fx:id="coverage_optimization_progress_fx" alignment="CENTER_RIGHT" contentDisplay="TEXT_ONLY" graphicTextGap="0.0" maxHeight="40.0" maxWidth="80.0" minHeight="40.0" minWidth="42.0" prefHeight="40.0" prefWidth="42.0" textAlignment="RIGHT">
+                                                                    <font>
+                                                                        <Font name="System Bold Italic" size="12.0" />
+                                                                    </font>
+                                                                    <HBox.margin>
+                                                                        <Insets left="5.0" />
+                                                                    </HBox.margin>
+                                                                </Label>
+                                                                <Label contentDisplay="TEXT_ONLY" graphicTextGap="0.0" layoutX="55.0" layoutY="10.0" maxHeight="40.0" maxWidth="30.0" minHeight="40.0" minWidth="30.0" prefHeight="40.0" prefWidth="30.0" text="\%">
+                                                                    <font>
+                                                                        <Font name="System Bold Italic" size="12.0" />
+                                                                    </font>
+                                                                    <HBox.margin>
+                                                                        <Insets />
+                                                                    </HBox.margin>
+                                                                </Label>
+                                                                <Button fx:id="stop_coverage_optimization_fx" alignment="CENTER" focusTraversable="false" maxHeight="30.0" maxWidth="35.0" minHeight="30.0" minWidth="35.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="35.0" text="Kill" textAlignment="RIGHT">
+                                                                    <HBox.margin>
+                                                                        <Insets top="5.0" />
+                                                                    </HBox.margin>
+                                                                </Button>
+                                                            </children>
+                                                        </HBox>
+                                                        <Label fx:id="too_many_calculations_notice_fx" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" maxHeight="50.0" maxWidth="192.0" minHeight="50.0" minWidth="192.0" prefHeight="50.0" prefWidth="192.0" text="Too many calculations!" textAlignment="CENTER" textFill="#9e1a1a" visible="false">
+                                                            <font>
+                                                                <Font name="System Bold Italic" size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                </VBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                                <Tab fx:id="best_localization_tab_fx" closable="false" text="Localization">
+                                    <content>
+                                        <AnchorPane maxWidth="192.0" minWidth="192.0" prefWidth="192.0">
+                                            <children>
+                                                <VBox style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                            <HBox maxHeight="40.0" maxWidth="192.0" minHeight="40.0" minWidth="192.0" prefHeight="40.0" prefWidth="192.0" spacing="4.0">
+                                                                <children>
+                                                                    <Label contentDisplay="TEXT_ONLY" graphicTextGap="0.0" maxHeight="40.0" maxWidth="130.0" minHeight="40.0" minWidth="130.0" prefHeight="40.0" prefWidth="130.0" text="View Separation Space" textAlignment="CENTER">
+                                                                        <font>
+                                                                            <Font name="System Bold Italic" size="12.0" />
+                                                                        </font>
+                                                                        <HBox.margin>
+                                                                            <Insets left="5.0" />
+                                                                        </HBox.margin>
+                                                                    </Label>
+                                                                    <ToggleButton fx:id="toggle_show_separation_features_fx" focusTraversable="false" maxHeight="30.0" maxWidth="47.0" minHeight="30.0" minWidth="47.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="47.0" text="View" textAlignment="RIGHT">
+                                                                        <HBox.margin>
+                                                                            <Insets right="4.0" top="5.0" />
+                                                                        </HBox.margin>
+                                                                    </ToggleButton>
+                                                                </children>
+                                                            </HBox>
+                                          <VBox fx:id="prepare_radiomap_vbox_fx">
+                                             <children>
+                                                <HBox fx:id="generate_localization_node_candidates_hbox_fx" maxHeight="40.0" maxWidth="192.0" minHeight="40.0" minWidth="192.0" prefHeight="40.0" prefWidth="192.0" spacing="4.0">
+                                                   <children>
+                                                      <Label accessibleRole="TEXT_AREA" alignment="CENTER_RIGHT" contentDisplay="TEXT_ONLY" graphicTextGap="0.0" maxHeight="40.0" maxWidth="130.0" minHeight="40.0" minWidth="130.0" prefHeight="40.0" prefWidth="130.0" text="Build the Radiomap" textAlignment="RIGHT">
+                                                         <HBox.margin>
+                                                            <Insets left="5.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                      <Button fx:id="generate_localization_optimization_node_candidates_fx" focusTraversable="false" maxHeight="30.0" maxWidth="47.0" minHeight="30.0" minWidth="47.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="47.0" text="Build" textAlignment="RIGHT">
+                                                         <HBox.margin>
+                                                            <Insets right="4.0" top="5.0" />
+                                                         </HBox.margin>
+                                                      </Button>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </HBox>
+                                                <StackPane maxHeight="40.0" minHeight="40.0" prefHeight="40.0">
+                                                   <children>
+                                                      <HBox fx:id="localization_opt_node_candidates_loading_panel_fx" maxHeight="40.0" maxWidth="192.0" minHeight="40.0" minWidth="192.0" prefHeight="40.0" prefWidth="192.0" visible="false">
+                                                         <children>
+                                                            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../Graphics/Optimize_Nodes/Spinner-1s-40px.gif" />
+                                                               </image>
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </ImageView>
+                                                            <Label contentDisplay="TEXT_ONLY" graphicTextGap="0.0" maxHeight="40.0" maxWidth="80.0" minHeight="40.0" minWidth="80.0" prefHeight="40.0" prefWidth="80.0" text="Candidates&#13;Prepared:" textAlignment="RIGHT">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="12.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="loaded_candidates_for_localization_opt_fx" contentDisplay="TEXT_ONLY" graphicTextGap="0.0" layoutX="55.0" layoutY="10.0" maxHeight="40.0" maxWidth="30.0" minHeight="40.0" minWidth="30.0" prefHeight="40.0" prefWidth="30.0">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="12.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <Button fx:id="cancel_candidate_loader_for_localization_opt_fx" alignment="CENTER" focusTraversable="false" maxHeight="30.0" maxWidth="35.0" minHeight="30.0" minWidth="35.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="35.0" text="Kill" textAlignment="RIGHT">
+                                                               <HBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </HBox.margin>
+                                                            </Button>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox fx:id="localization_optimization_node_candidates_loaded_panel_fx" maxHeight="40.0" maxWidth="192.0" minHeight="40.0" minWidth="192.0" prefHeight="40.0" prefWidth="192.0" spacing="4.0" visible="false">
+                                                         <children>
+                                                            <Label fx:id="radiomap_status_for_localization_optimization_fx" contentDisplay="TEXT_ONLY" graphicTextGap="0.0" maxHeight="40.0" maxWidth="125.0" minHeight="40.0" minWidth="125.0" prefHeight="40.0" prefWidth="125.0" textAlignment="CENTER">
+                                                               <font>
+                                                                  <Font name="System Bold Italic" size="12.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <ToggleButton fx:id="inspect_radiomap_for_localization_optimization_fx" focusTraversable="false" maxHeight="30.0" maxWidth="55.0" minHeight="30.0" minWidth="55.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="55.0" text="Inspect" textAlignment="RIGHT">
+                                                               <HBox.margin>
+                                                                  <Insets right="4.0" top="5.0" />
+                                                               </HBox.margin>
+                                                            </ToggleButton>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <Button fx:id="get_rss_report_fx" mnemonicParsing="false" text="Get RSS" />
+                                                <Label fx:id="feature_id_fx" prefHeight="24.0" prefWidth="42.0" text="Label" />
+                                                <Label fx:id="custom_localization_performance_score_fx" alignment="CENTER_RIGHT" contentDisplay="RIGHT" maxHeight="20.0" maxWidth="80.0" minHeight="20.0" minWidth="80.0" prefHeight="20.0" prefWidth="80.0" textAlignment="RIGHT" />
+                                             </children>
+                                          </HBox>
+                                                        <HBox fx:id="localization_optimization_setup_size_setter_panel_fx" disable="true" spacing="4.0" visible="false">
+                                                            <children>
+                                                                <Label accessibleRole="TEXT_AREA" contentDisplay="TEXT_ONLY" graphicTextGap="0.0" maxHeight="40.0" maxWidth="100.0" minHeight="40.0" minWidth="100.0" prefHeight="40.0" prefWidth="100.0" text="Find best setup&#13;for n Nodes:">
+                                                                    <HBox.margin>
+                                                                        <Insets left="5.0" />
+                                                                    </HBox.margin>
+                                                                </Label>
+                                                                <TextField fx:id="setup_size_for_localization_optimization_fx" alignment="CENTER" maxHeight="30.0" maxWidth="35.0" minHeight="30.0" minWidth="35.0" prefHeight="30.0" prefWidth="35.0" promptText="(n)">
+                                                                    <HBox.margin>
+                                                                        <Insets top="5.0" />
+                                                                    </HBox.margin>
+                                                                </TextField>
+                                                                <Button fx:id="maximize_localization_fx" maxHeight="30.0" maxWidth="45.0" minHeight="30.0" minWidth="45.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="45.0" text="Go" textAlignment="RIGHT">
+                                                                    <HBox.margin>
+                                                                        <Insets right="4.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                </Button>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets top="30.0" />
+                                                            </VBox.margin>
+                                                        </HBox>
+                                                        <HBox fx:id="localization_optimization_status_fx" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" visible="false">
+                                                            <children>
+                                                                <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                                    <image>
+                                                                        <Image url="@../Graphics/Optimize_Nodes/Spinner-1s-40px.gif" />
+                                                                    </image>
+                                                                    <HBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                    </HBox.margin>
+                                                                </ImageView>
+                                                                <Label fx:id="localization_optimization_progress_fx" alignment="CENTER_RIGHT" contentDisplay="TEXT_ONLY" graphicTextGap="0.0" maxHeight="40.0" maxWidth="80.0" minHeight="40.0" minWidth="42.0" prefHeight="40.0" prefWidth="53.0" textAlignment="RIGHT">
+                                                                    <font>
+                                                                        <Font name="System Bold Italic" size="12.0" />
+                                                                    </font>
+                                                                    <HBox.margin>
+                                                                        <Insets left="5.0" />
+                                                                    </HBox.margin>
+                                                                </Label>
+                                                                <Button fx:id="stop_localization_optimization_fx" alignment="CENTER" focusTraversable="false" maxHeight="30.0" maxWidth="35.0" minHeight="30.0" minWidth="35.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="35.0" text="Kill" textAlignment="RIGHT">
+                                                                    <HBox.margin>
+                                                                        <Insets left="15.0" top="5.0" />
+                                                                    </HBox.margin>
+                                                                </Button>
+                                                            </children>
+                                                        </HBox>
+                                                        <Label fx:id="localization_too_many_calculations_notice_fx" alignment="CENTER" contentDisplay="CENTER" focusTraversable="false" graphicTextGap="0.0" maxHeight="50.0" maxWidth="192.0" minHeight="50.0" minWidth="192.0" prefHeight="50.0" prefWidth="192.0" text="Too many calculations!" textAlignment="CENTER" textFill="#9e1a1a" visible="false">
+                                                            <font>
+                                                                <Font name="System Bold Italic" size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                    <opaqueInsets>
+                                                        <Insets />
+                                                    </opaqueInsets>
+                                                </VBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                            </tabs>
+                            <VBox.margin>
+                                <Insets left="2.0" right="2.0" />
+                            </VBox.margin>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </TabPane>
+                    </children>
+                </VBox>
+            </children>
+        </StackPane>
+    </right>
+</BorderPane>

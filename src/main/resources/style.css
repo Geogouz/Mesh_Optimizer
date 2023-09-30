@@ -1,0 +1,9 @@
+#Resize_Icon_css {
+    -fx-background-image: url("/Graphics/Window_Frame_Icons/resize.png") no-repeat top left;
+    -fx-background-color: transparent;
+}
+
+.tab-pane *.tab-header-background {
+    -fx-background-color: -fx-outer-border, -fx-inner-border, derive(-fx-color, -20%);
+    -fx-effect: innershadow(two-pass-box, rgba(0, 0, 0, 0.6), 4, 0.0, 0, 0);
+}

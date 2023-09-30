@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Top_Canvas" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Core.Controllers.Main_Controller">
+    <children>
+        <AnchorPane maxWidth="-Infinity" minWidth="-Infinity" prefWidth="140.0" style="-fx-background-color: #58418e;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="140.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Button fx:id="Minimize_button_fx" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="34.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="15.0" />
+                        <Button fx:id="Maximize_button_fx" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="34.0" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="15.0" />
+                        <Button fx:id="Undo_Maximize_button_fx" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="34.0" visible="false" AnchorPane.leftAnchor="53.0" AnchorPane.topAnchor="15.0" />
+                        <Button fx:id="Exit_button_fx" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="18.0" prefWidth="34.0" AnchorPane.leftAnchor="89.0" AnchorPane.topAnchor="15.0" />
+                    </children>
+                </AnchorPane>
+                <Button fx:id="Plan_Designer_button_fx" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="90.0" prefWidth="140.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="60.0">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Button>
+                <Label alignment="CENTER" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="140.0" text="Plan Designer" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="150.0">
+                    <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Button fx:id="Optimize_Nodes_button_fx" contentDisplay="GRAPHIC_ONLY" disable="true" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="90.0" prefWidth="140.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="200.0" />
+                <Label alignment="CENTER" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="140.0" text="Optimize Nodes" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="290.0">
+                    <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                    </font>
+                </Label>
+                <Button fx:id="Settings_button_fx" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="70.0" prefWidth="140.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" />
+                <Label alignment="CENTER" contentDisplay="CENTER" ellipsisString="" graphicTextGap="0.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="20.0" prefWidth="140.0" text="ver. 1.0.0 Beta" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" wrapText="true" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0">
+                    <font>
+                        <Font name="Calibri" size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <VBox prefHeight="720.0" prefWidth="1140.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="140.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <AnchorPane fx:id="top_menu_bar_fx" layoutX="10.0" layoutY="695.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="1140.0" style="-fx-background-color: #cccccc;">
+                    <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="1140.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <children>
+                                <AnchorPane prefHeight="40.0" style="-fx-background-color: #58418e;" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Label fx:id="title_fx" alignment="CENTER" contentDisplay="CENTER" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <font>
+                                                <Font name="System Italic" size="14.0" />
+                                            </font>
+                                        </Label>
+                                        <Button fx:id="test2_fx" layoutX="842.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" text="test2" />
+                                        <Button fx:id="test1_fx" layoutX="768.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="48.0" text="dasdw" />
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #58418e;">
+                                    <children>
+                                        <HBox fx:id="project_management_menu_fx" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" style="-fx-background-color: #3a3469;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Button fx:id="new_project_fx" contentDisplay="CENTER" graphicTextGap="0.0" mnemonicParsing="false" text="New">
+                                                    <HBox.margin>
+                                                        <Insets left="4.0" top="8.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="open_project_fx" mnemonicParsing="false" text="Open">
+                                                    <HBox.margin>
+                                                        <Insets left="4.0" top="8.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="save_project_fx" disable="true" mnemonicParsing="false" text="Save">
+                                                    <HBox.margin>
+                                                        <Insets left="4.0" top="8.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="load_plan_fx" disable="true" layoutX="89.0" layoutY="10.0" mnemonicParsing="false" text="Load">
+                                                    <HBox.margin>
+                                                        <Insets left="4.0" top="8.0" />
+                                                    </HBox.margin>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </HBox>
+                    </children>
+                </AnchorPane>
+                <AnchorPane fx:id="work_panel_fx" style="-fx-background-color: #282828;" VBox.vgrow="ALWAYS">
+                    <children>
+                        <ImageView fx:id="Project_Management_Tips_fx" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <image>
+                                <Image url="@../Graphics/Plan_Designer/Project_Management_Tips.jpg" />
+                            </image>
+                        </ImageView>
+                        <ImageView fx:id="Load_Map_Tip_fx" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" visible="false" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <image>
+                                <Image url="@../Graphics/Optimize_Nodes/Load_Plan_Tip.jpg" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="1140.0" style="-fx-background-color: #cccccc;">
+                    <children>
+                        <Button id="Resize_Icon_css" fx:id="Resize_button_fx" contentDisplay="GRAPHIC_ONLY" graphicTextGap="0.0" maxHeight="15.0" maxWidth="15.0" minHeight="15.0" minWidth="15.0" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0" stylesheets="@../style.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                            <cursor>
+                                <Cursor fx:constant="SE_RESIZE" />
+                            </cursor>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
