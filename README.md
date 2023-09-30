@@ -20,6 +20,7 @@ Screenshots:
 Guide:
 =============================================
 For its functionality, you can take a look at the following [Guide](https://github.com/Geogouz/Mesh_Optimizer/blob/master/Content/Guide.pdf)
+For a quick start, we provide a [demo project](https://github.com/Geogouz/Mesh_Optimizer/blob/master/Content/test project.mop).
 
 ___
 Mesh Optimizer has been developed within the frame of a [Thesis project](https://repository.tudelft.nl/islandora/object/uuid%3A4539b64d-1b05-49d0-9dfe-cacf3ffbfd7c) at Delft University and presented at [ISPRS Conference](https://isprs-archives.copernicus.org/articles/XLII-2-W13/909/2019/).
