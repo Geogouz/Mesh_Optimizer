@@ -10,7 +10,7 @@ In our case, the implemented method aims to find the Node-Setup that offers the 
 </br>
 </br>
 
-Screenshots:
+*Screenshots:*
 <img src="https://github.com/Geogouz/Mesh_Optimizer/blob/master/Content/Obstructions modeled.jpg"/>
 
 <img src="https://github.com/Geogouz/Mesh_Optimizer/blob/master/Content/The loaded test-dataset.jpg"/>
@@ -25,7 +25,7 @@ For a quick start, we provide a [demo project](https://github.com/Geogouz/Mesh_O
 ___
 Mesh Optimizer has been developed within the frame of a [Thesis project](https://repository.tudelft.nl/islandora/object/uuid%3A4539b64d-1b05-49d0-9dfe-cacf3ffbfd7c) at Delft University and presented at [ISPRS Conference](https://isprs-archives.copernicus.org/articles/XLII-2-W13/909/2019/).
 
-An executable file is also provided for direct usage: [Download Ver. 1.0.0 Beta](https://github.com/Geogouz/Mesh_Optimizer/blob/master/Content/Mesh_Optimizer.png)
+An executable file is also provided for direct usage: [Download Ver. 1.0.0 Beta](https://github.com/Geogouz/Mesh_Optimizer/blob/master/Content/Mesh_Optimizer.exe)
 ___
 
 Support
